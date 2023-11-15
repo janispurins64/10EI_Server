@@ -1,3 +1,3 @@
 # 10EI_Server
-# Flask resvera izveide
+# Flask servera izveide
 # Pieprasījumu apstrāde
