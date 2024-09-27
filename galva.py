@@ -4,6 +4,7 @@ from flask import request
 from flask import url_for
 from flask import render_template
 from flask import jsonify
+import datetime
 
 app = Flask(__name__)
 
@@ -24,7 +25,9 @@ def root():
 # Šo izsauc ar http://127.0.0.1:5000/tests
 @app.route('/tests')
 def health():
-  return render_template("tests.html")
+  lai =  datetime.datetime.now()
+  print(lai.strftime("%d/%m/%Y %H:%M:%S"))
+  return render_template("tests.html",laiks=str(lai))
 #----------------------------------------------------   
 if __name__ == '__main__':
   app.run(debug=True,port=5000) # ,host='10.1.15.xx' host='0.0.0.0' - datora IP adrese
